@@ -20,7 +20,7 @@ const App = () => {
       <AddForm addGrocery={addGrocery} />
 
       {
-        items.length === 0 ? <p>No Item Yet</p> : <ExpensesList deleteGrocery={deleteGrocery} items={items} />
+        items.length === 0 ? <p className="text">No Item Yet</p> : <ExpensesList deleteGrocery={deleteGrocery} items={items} />
       }
 
     </div>

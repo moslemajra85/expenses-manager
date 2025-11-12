@@ -20,6 +20,10 @@ const AddForm = ({ addGrocery }) => {
         }
 
         addGrocery(grocery)
+
+        setName('')
+        setPrice(0)
+        setCategory('')
     }
 
     return (
@@ -36,7 +40,7 @@ const AddForm = ({ addGrocery }) => {
 
                 <div className="form-group">
                     <label>Price:</label>
-                    <input onChange={(e) => setPrice(+e.target.value)} value={price} type="number" placeholder='Enter Price' />
+                    <input onChange={(e) => setPrice(+e.target.value)} value={price === 0 ? '' : price} type="number" placeholder='Enter Price' />
                 </div>
 
                 <div className='form-group'>

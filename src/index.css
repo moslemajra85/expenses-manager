@@ -137,3 +137,17 @@ table td:last-child svg:hover {
   transform: scale(1.2);
   filter: drop-shadow(0 2px 4px rgba(255, 0, 0, 0.3));
 }
+
+.total {
+  font-weight: bolder;
+  font-size: 20px;
+}
+
+
+.text {
+
+
+  color: dodgerblue;
+  font-size: 22px;
+  text-align: center;
+}

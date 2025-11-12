@@ -61,3 +61,79 @@ body {
   color: dodgerblue;
   text-decoration: underline;
 }
+
+/* Table Styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px auto;
+  max-width: 1000px;
+  background-color: #ffffff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+table thead {
+  background: linear-gradient(135deg, dodgerblue 0%, rgb(14, 121, 228) 100%);
+  color: #ffffff;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+table th {
+  padding: 16px 20px;
+  text-align: left;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-bottom: 2px solid rgb(14, 121, 228);
+}
+
+table tbody tr {
+  border-bottom: 1px solid #e0e7ff;
+  transition: all 0.3s ease;
+}
+
+table tbody tr:hover {
+  background-color: #f0f7ff;
+  transform: scale(1.01);
+  box-shadow: 0 4px 8px rgba(30, 144, 255, 0.1);
+}
+
+table td {
+  padding: 14px 20px;
+  font-size: 14px;
+  color: #333333;
+  font-weight: 500;
+}
+
+table tbody tr:last-child {
+  border-bottom: none;
+}
+
+table tbody tr:nth-child(even) {
+  background-color: #f9fbff;
+}
+
+table tbody tr:nth-child(even):hover {
+  background-color: #f0f7ff;
+}
+
+/* Action Column Styling */
+table td:last-child {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+table td:last-child svg {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+table td:last-child svg:hover {
+  transform: scale(1.2);
+  filter: drop-shadow(0 2px 4px rgba(255, 0, 0, 0.3));
+}

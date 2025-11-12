@@ -1,33 +1,54 @@
-import React from 'react'
+import { useState } from "react"
+const AddForm = ({ addGrocery }) => {
 
-const AddForm = () => {
+    const [name, setName] = useState('')
+    const [price, setPrice] = useState(0)
+    const [category, setCategory] = useState('')
+
+
+
+    const handleSubmit = (event) => {
+
+        event.preventDefault()
+
+        const grocery = {
+
+            id: Date.now(),
+            name,
+            price,
+            category
+        }
+
+        addGrocery(grocery)
+    }
+
     return (
 
         <div className="form-container">
 
             <h1 className='title'>Add Groceries</h1>
-            <form>
+            <form onSubmit={handleSubmit}>
 
                 <div className="form-group">
                     <label>Name:</label>
-                    <input type="text" placeholder='Enter Name' />
+                    <input onChange={(e) => setName(e.target.value)} value={name} type="text" placeholder='Enter Name' />
                 </div>
 
                 <div className="form-group">
                     <label>Price:</label>
-                    <input type="number" placeholder='Enter Price' />
+                    <input onChange={(e) => setPrice(+e.target.value)} value={price} type="number" placeholder='Enter Price' />
                 </div>
 
                 <div className='form-group'>
 
                     <label> Category</label>
 
-                    <select className='form-control' placeholder="Select Category">
+                    <select onChange={(e) => setCategory(e.target.value)} value={category} className='form-control' placeholder="Select Category">
 
                         <option value=""></option>
                         <option value="groceries">Groceries</option>
                         <option value="tools">Tools</option>
-                        <option value="entertainmenet">Entertainmenet</option>
+                        <option value="entertainment">Entertainment</option>
                     </select>
 
                 </div>
